@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////
+// BASE DEFAULTS /////////////////////////////////////////
+//////////////////////////////////////////////////////////
+$uforms-namespace: '.form' !default; //prefix for all classes
+$uforms-panel-bgcolor: #5a5a5a!default;
+$uforms-fields-bgcolor: transparent !default;
+//Set this to false if you want things like up/down number arrows on right side
+$unicorn-turn-off-number-input-spinners: true !default;
+$uforms-color-field-width: 50px !default;
+$uforms-cursor: pointer !default;
+
+$uforms-sizes: (jumbo 800px) (large 600px) (normal 400px) (small 300px) !default;
+
+//////////////////////////////////////////////////////////
+// TYPOGRAPHY ////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+$uforms-font-color: #666 !default;
+$uforms-font-dark: darken($uforms-font-color, 10%) !default;
+$uforms-font-muted: lighten($uforms-font-color, 10%) !default;
+$uforms-font-size: 14px !default;
+$uforms-base-line-height: $uforms-font-size * 1.4 !default;
+$uforms-small-font-size: 12px !default;
+$uforms-font-weight: 300 !default;
+$uforms-font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$uforms-error-color: #cc0000 !default;
+
+//////////////////////////////////////////////////////////
+// FIELDS ////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+$uforms-input-height: 40px !default;
+$uforms-input-gutter: $uforms-font-size * 1.5 !default;
+$uforms-input-padding: ($uforms-font-size / 2) + 3px !default;
+$uforms-transition-duration: 0.2s !default;
+$uforms-border-radius: 4px !default;
+$uforms-placeholder-color: $uforms-font-muted !default;
+$uforms-placeholder-focus-color: lighten($uforms-font-muted, 15%) !default;
+$uforms-border-color: #dddddd !default;
+$uforms-checkbox-font-size: $uforms-small-font-size !default;
+$uforms-checkbox-height: 13px !default;;
+
+//////////////////////////////////////////////////////////
+// RESPONSIVE ////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//TODO: Move to _responsive partial
+$uforms-responsive: 'enabled' !default;
+$uforms-small-breakpoint: 480px !default;
+$uforms-tablet-breakpoint: 900px !default;

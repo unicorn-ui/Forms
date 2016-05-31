@@ -1,28 +1,99 @@
-$white: white;
-$light: #f0f0f0;
+$white: #ffffff;
 $x-light: #f6f6f6;
+$light: #f0f0f0;
+$mid-light: #888888;
 $mid-dark: #555555;
-  
+$dark: #444444;
+$blue: #229ffd;
+$blueDark: #1a7fcc;
+$headerBackground: linear-gradient(90deg, $blueDark 10%, $blue 90%); 
+$headerHeight: 50px;
+$sidebarMarginTop: 64px;
+$headerClearance: #{$headerHeight + $sidebarMarginTop};
+$mainWidth: 1150px;
+$fontStack: proxima-nova, Helvetica, Verdana, Arial, "Lucida Grande", sans-serif;
 
-//TODO: CLEAN THIS ALL UP ;)
+//TODO: CLEAN THIS ALL UP AND MAKE RESPONSIVE ;)
 // @media screen and (min-width: 1200px)
-.l-centered-content {
-    width: 960px;
+// .l-centered-content {
+//     width: 960px;
+// }
+
+body {
+  font-family: $fontStack;
 }
+
 .l-centered-content {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  width: $mainWidth;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .top-nav {
-  height: 80px;
+  height: $headerHeight;
   padding: 0;
-  background: #FFF;
+  background: $headerBackground;
   opacity: .95;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  font-family: proxima-nova, Helvetica, Verdana, Arial, "Lucida Grande", sans-serif;
+  font-family: $fontStack;
   text-transform: uppercase;
+
+  h1 {
+    float: left;
+    font-weight: 200;
+    margin: 0;
+    line-height: $headerHeight;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  * {
+    color: $white;
+    text-decoration: none;
+  }    
+}
+
+.top-nav-list {
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 100;
+
+  li {
+    float: right;
+    margin: 0px;
+
+    &:hover {
+      background: white;
+      cursor: pointer;
+
+      a {
+        color: $blue;
+      }
+    }
+  }
+
+  a {
+    transition-property: all;
+    transition-duration: .3s;
+    font-weight: 300;
+    display: inline-block;
+    line-height: $headerHeight;
+    padding: 0px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover {
+      background: white;
+      cursor: pointer;
+    }
+  }
 }
 
 .l-pinned-top {
@@ -30,24 +101,11 @@ $mid-dark: #555555;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 12;
 }
 
-.top-nav h1 {
-    float: left;
-    font-weight: 200;
-    margin: 0;
-}
-.top-nav ul {
-    margin: 0;
-    padding: 0;
-    float: right;
-    list-style-type: none;
-    font-size: 18px;
-    font-weight: 100;
-}
 
 ///////////////////////////////////////////////////
-
 
 .tdcss-header,
 .tdcss-subheader-nav {
@@ -63,6 +121,7 @@ div[role=main] {
 
   &.loaded {
     visibility: visible;
+    padding-top: $headerHeight;
   }
 
   //Also hide the container sibling to main
@@ -82,32 +141,17 @@ div[role=main] {
   margin: 0 auto;
 }
 
-.category {
-  .tdcss-category {
-    // background-position: 0 0;
-    // background-repeat: no-repeat;
-    // width: 745px;
-    // height: 325px;
-
-    // .tdcss-h2 {
-    //   visibility: hidden;
-    // }
-  }
-}
-
 .tdcss-container {
   position: relative;
   display: none;
   margin: 0 auto;
   position: relative;
-  width: 1150px;
+  width: $mainWidth;
 
   &.loaded {
     display: block;
   }
-
 }
-
 
 .tdcss-elements {
   display: inline-block;
@@ -123,6 +167,7 @@ div[role=main] {
 .tdcss-navigation {
   display: inline-block;
   width: 225px;
+  margin-top: $headerClearance;
 
   .tdcss-nav-category {
     padding-left: 0;//override tdcss
@@ -134,7 +179,7 @@ div[role=main] {
 
 
         .tdcss-section-title > a {
-          // font-family: tbd;
+          font-family: $fontStack;
           font-size: 14px;
           width: 100%;
           height: 35px;
@@ -158,11 +203,11 @@ div[role=main] {
   }
 
   .tdcss-html-snippet-toggle {
-    //these override tdcss
-    // color: 
+    font-weight: 300;
+    color: $blue;
 
     &:hover {
-      // color: 
+      color: $blueDark;
     }
   }
 }
@@ -179,7 +224,7 @@ div[role=main] {
 .tdcss-html-toggle,
 .tdcss-category-title,
 .tdcss-nav-category {
-  // font-family: $mavenlink-type-font-accent;
+  font-family: $fontStack;
   font-size: 14px;
   font-weight: 300;
   background-color: $white;
@@ -199,7 +244,7 @@ div[role=main] {
   padding-top: 20px;
   padding-bottom: 22px;
   padding-left: 20px;
-  // font-family: $mavenlink-type-font-accent;
+  font-family: $fontStack;
 }
 
 .tdcss-elements p {
@@ -237,13 +282,15 @@ div[class^="tdcss"], .tdcss-h3 {
 }
 
 .category {
-  margin-top: 64px;
   border-top: 1px solid $light;
   border-bottom: 1px solid $light;
+
+  //Makes first category have clearance from fixed header, consistent with left sidebar
+  &:first-child {
+    margin-top: $headerClearance;
+  }
 }
 
-
-//To have an "island" for the right side, this overrides all the sub-sections replacing any margin-tops with padding
 .tdcss-description,
 .tdcss-category-wrap,
 .tdcss-section,
@@ -278,7 +325,7 @@ div[class^="tdcss"], .tdcss-h3 {
 
 .tddcss-top-link {
   float: right;
-  color: #575757;
+  color: $dark;
   opacity: .7;
   transition: opacity .4s ease-out;
 
@@ -288,23 +335,17 @@ div[class^="tdcss"], .tdcss-h3 {
   }
 }
 
-
-
 .tdcss-description {
   margin-bottom: 0;
   padding-bottom: 1em;
   border-bottom: none;
 
-  //Hide "back to tops" that come directly after a description (which should be
-  //our category descriptions), as those have a horizontal rule which clashes
   & + .tdcss-top {
     display: none;
   }
 
   pre, .codeword {
-    // background-color: $codeBG;
     border-radius: 2px;
-    // color: $codeColor;
   }
 
   pre {
@@ -327,17 +368,12 @@ div[class^="tdcss"] {
   .tdcss-description,
   .tdcss-elements p,
   .tdcss-description p {
-    // font-family: $mavenlink-type-font-accent;
+    font-family: $fontStack;
     font-size: 14px;
     line-height: 2;
     font-weight: 300;
   }
 }
-
-.tdcss-dom-example {
-  // background-color: $white !important;
-}
-
 
 .tdcss-description,
 .language-markup {
@@ -354,11 +390,10 @@ div[class^="tdcss"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  // background-color: $codeBG;
   border: 1px solid $light;
 }
 
-/* Inline code */
+// Inline code
 :not(pre) > code[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
@@ -386,13 +421,12 @@ pre[class*="language-"] {
   z-index: 10;
 
   .tdcss-copy-btn {
-    background-color: $x-light;
-    color: $mid-dark;
+    background-color: $blue;
+    color: $white;
   }
 
 }
 
-//original them overrides
 .tdcss-category .tdcss-h2,
 .tdcss-section .tdcss-h2 {
   display: inline-block;
@@ -401,11 +435,11 @@ pre[class*="language-"] {
   font-family: inherit;
   transition: none;
   background-color: inherit;
-  letter-spacing: -1px;
-  color: #838383;
+  letter-spacing: inherit;
+  color: $mid-light;
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
 
 }
 
@@ -424,11 +458,180 @@ pre[class*="language-"] {
   background-color: inherit;
 }
 
+.footer,
 .footer {
   clear: both;
+  color: #a9adb1;
   background-color: #333333;
   text-align: center;
-  color: #a9adb1;
   height: 100px;
   padding: 20px 0;
 }
+
+.footer a {
+  color: #a9adb1;
+  opacity: .8;
+  transition: opacity .4 ease-out;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+////////////// PRISM THEME ////////////////
+/**
+ * VS theme by Andrew Lock (https://andrewlock.net)
+ * Inspired by Visual Studio syntax coloring
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #393A34;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    font-size: 0.95em;
+    line-height: 1.2em;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: #0000ff;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: #0000ff;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border: 1px solid #dddddd;
+
+
+
+//HACK EDIT
+    background-color: rgba(34, 159, 253, .025);
+//ENDS: HACK EDIT
+
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .2em;
+    padding-top: 1px; padding-bottom: 1px;
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008000; font-style: italic;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.string {
+    color: #A31515;
+}
+
+.token.punctuation,
+.token.operator {
+    color: #393A34; /* no highlight */
+}
+
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.inserted {
+    color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-value,
+.language-autohotkey .token.selector,
+code[class*="language-css"] {
+    color: #0000ff;
+}
+
+.token.function {
+    color: #393A34;
+}
+.token.deleted,
+.language-autohotkey .token.tag {
+    color: #9a050f;
+}
+
+.token.selector,
+.language-autohotkey .token.keyword {
+    color: #00009f;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.class-name {
+    color: #2B91AF;
+}
+
+.token.tag,
+.token.selector {
+    color: #800000;
+}
+
+.token.attr-name,
+.token.property,
+.token.regex,
+.token.entity {
+    color: #ff0000;
+}
+
+.token.directive.tag  .tag {
+    background: #ffff00;
+    color: #393A34;
+}
+
+
+
+
+
+
+
+
+
+

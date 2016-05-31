@@ -1,0 +1,208 @@
+/*
+* Base Forms Style
+*
+* The default values for .<namespace> class
+*/
+
+
+#{$uforms-namespace} {
+  width: auto;
+  margin: $uforms-input-height 0;
+
+  fieldset {
+    border: 0;
+    legend {
+      color: $uforms-font-muted;
+    }
+  }
+  ul, li {list-style: none;}
+}
+
+
+
+label,
+input,
+textarea {
+  color: $uforms-font-color;
+  font-size: $uforms-font-size;
+  font-family: $uforms-font-family;
+  font-weight: $uforms-font-weight;
+}
+
+textarea,
+input {
+  display: inline-block;
+  border-radius: $uforms-border-radius;
+  margin: 0 6px;
+  padding: $uforms-input-padding;
+  height: $uforms-input-height;
+  background: $uforms-fields-bgcolor;
+  border: 1px solid $uforms-border-color;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:focus,
+  &.focus {
+    border-color: $uforms-border-color;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05), 0 0 5px rgba($uforms-border-color, 0.5);
+    outline: 0;
+  }
+
+  &#{$uforms-namespace}-input-block {
+    width: 100%;
+    margin: 8px 0 12px 0;
+  }
+}
+
+&#{$uforms-namespace}-field {
+  position: relative;
+}
+
+
+
+
+#{$uforms-namespace}-field-group {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+
+  [class^="form-field"] {
+    width: 100%;
+    outline: 0;
+    margin: 0;
+  }
+
+  &.icon-left > i,
+  &.icon-right > i {
+    position: absolute;
+    top: 0;
+    width: $uforms-input-height - 8px;
+    height: $uforms-input-height;
+    line-height: $uforms-input-height;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: $uforms-border-color;
+  }
+  &.icon-left {
+    & > i {
+      left: 0;
+    }
+    & > input {
+      width: 100%;
+      padding-left: 30px;
+    }
+  }
+  &.icon-right {
+    & > i {
+      right: 0;
+    }
+    & > input {
+      width: 100%;
+      padding-right: 30px;
+    }
+  }
+}
+
+input[type="color"] {
+  width: $uforms-color-field-width;
+  background: transparent;
+  border: none;
+}
+
+//http://css-tricks.com/snippets/css/turn-off-number-input-spinners/
+@if($unicorn-turn-off-number-input-spinners) {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+textarea {
+  height: auto;
+  min-width: 100%;
+  min-height: $uforms-input-height;
+  padding: $uforms-font-size / 2;
+}
+
+select {
+  //opacity: 0;//uncomment if you're going to dynamically put a span and style that
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: $uforms-input-height;
+  font-size: $uforms-font-size;
+  padding: 0 $uforms-font-size / 2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  option {
+    font-size: $uforms-small-font-size;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $uforms-placeholder-color;
+  transition: $uforms-transition-duration all;
+}
+:-moz-placeholder {
+  color: $uforms-placeholder-color;
+  transition: $uforms-transition-duration all;
+}
+::-webkit-input-placeholder:focus {
+  color: $uforms-placeholder-focus-color;
+}
+:-moz-placeholder:focus {
+  color: $uforms-placeholder-focus-color;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 0;
+  vertical-align: middle;
+  cursor: $uforms-cursor;
+}
+
+#{$uforms-namespace}-radio,
+#{$uforms-namespace}-checkbox {
+  display: inline-block;
+  position: relative;
+  background: $uforms-fields-bgcolor;
+  padding: ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 0 ($uforms-base-line-height - ($uforms-checkbox-font-size * 1.2)) / 2 $uforms-checkbox-height * 1.61;
+  font-size: $uforms-checkbox-font-size;
+  height: $uforms-font-size * 1.2;
+  width: $uforms-font-size * 1.2;
+  line-height: 1.2;
+  cursor: $uforms-cursor;
+  input[type=radio],
+  input[type=checkbox] {
+    display: block;
+    position: absolute;
+    top: ($uforms-base-line-height - $uforms-checkbox-height) / 2;
+    left: 0px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+

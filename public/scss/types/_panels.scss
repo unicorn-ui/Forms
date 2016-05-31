@@ -1,0 +1,54 @@
+
+////////////////////////////////////////////
+// PANELS //////////////////////////////////
+////////////////////////////////////////////
+
+@each $uforms-size in $uforms-sizes {
+  $uforms-size-name: nth($uforms-size, 1);
+  $uforms-size: nth($uforms-size, 2);
+
+  $uforms-size-namespace: #{$uforms-namespace}-panel-#{$uforms-size-name};
+
+  #{$uforms-size-namespace} {
+    width: $uforms-size;
+  }
+}
+
+#{$uforms-namespace}-panel {
+  margin: $uforms-input-height 0;
+}
+
+#{$uforms-namespace}-panel-centered {
+  margin: $uforms-input-height auto;
+}
+
+#{$uforms-namespace}-panel-header {
+  position: relative;
+  padding: 12px 20px;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  background-color: $uforms-panel-bgcolor;
+  border: $uforms-border-color;
+  border-bottom: 0;
+  border-radius: $uforms-border-radius $uforms-border-radius 0 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $uforms-font-size + 2px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+}
+
+#{$uforms-namespace}-panel-body {
+  padding: 20px;
+  font-size: $uforms-font-size;
+  color: $uforms-font-color;
+  border: 1px solid $uforms-border-color;
+  border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
+}
+
+//TODO
+#{$uforms-namespace}-panel-footer {}

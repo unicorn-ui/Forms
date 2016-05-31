@@ -1,0 +1,54 @@
+
+////////////////////////////////////////////
+// GROUPED /////////////////////////////////
+////////////////////////////////////////////
+
+#{$uforms-namespace}-grouped {
+  margin: 0 0 10px;
+  padding: 0;
+
+  & input,
+  & textarea {
+    display: block;
+    padding: 10px;
+    margin: 0 0 -1px;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
+#{$uforms-namespace}-grouped-rounded {
+  & > #{$uforms-namespace}-field-group:first-child > input,
+  & > input:first-child,
+  & > textarea:first-child {
+    top: 1px;
+    border-radius: $uforms-border-radius $uforms-border-radius 0 0;
+    margin: 0;
+  }
+
+  & input,
+  & textarea {margin: 0 0 -2px;}
+
+  & > #{$uforms-namespace}-field-group:last-child > input,
+  & > input:last-child,
+  & > textarea:last-child {
+    top: 1px;
+    border-radius: 0 0 $uforms-border-radius $uforms-border-radius;
+    margin: 0;
+  }
+}
+
+#{$uforms-namespace}-grouped-block {
+  & input,
+  & textarea {
+    width: 100%;
+    margin: 0 0 -5px;
+  }
+  & input:last-child,
+  & textarea:last-child {
+    top: 4px;
+    margin-bottom: 3px;
+  }
+}
