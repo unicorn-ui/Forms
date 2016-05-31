@@ -1,0 +1,36 @@
+{
+  "name": "Forms",
+  "version": "0.1.0",
+  "homepage": "https://github.com/unicorn-ui/Forms",
+  "authors": [
+    "(Rob Levin <roblevintennis@gmail.com>) and (Alex Wolfe <thewolfe@gmail.com>)"
+  ],
+  "description": "A CSS form library built using Sass",
+  "main": "css/forms.css",
+  "keywords": [
+    "Forms",
+    "Form",
+    "Sass",
+    "SCSS",
+    "css",
+    "css forms",
+    "sass forms"
+  ],
+  "license": "Apache License v2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "latest",
+    "animate.css": "latest",
+    "nprogress": "latest",
+    "underscore": "latest",
+    "jquery.scrollTo": "latest",
+    "Grids": "latest",
+    "jQuery": "latest"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "about": {
+    "title": "Welcome to my about page",
+    "description": "I’m awesome and so are you"
+  },
+  "index": {
+    "title": "home page title here",
+    "description": "Best home page ever"
+  }
+}

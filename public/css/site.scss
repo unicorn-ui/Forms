@@ -1,0 +1,434 @@
+$white: white;
+$light: #f0f0f0;
+$x-light: #f6f6f6;
+$mid-dark: #555555;
+  
+
+//TODO: CLEAN THIS ALL UP ;)
+// @media screen and (min-width: 1200px)
+.l-centered-content {
+    width: 960px;
+}
+.l-centered-content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-nav {
+  height: 80px;
+  padding: 0;
+  background: #FFF;
+  opacity: .95;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  font-family: proxima-nova, Helvetica, Verdana, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+}
+
+.l-pinned-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-nav h1 {
+    float: left;
+    font-weight: 200;
+    margin: 0;
+}
+.top-nav ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+///////////////////////////////////////////////////
+
+
+.tdcss-header,
+.tdcss-subheader-nav {
+  visibility: hidden;
+
+  &.loaded {
+    visibility: visible;
+  }
+}
+
+div[role=main] {
+  visibility: hidden;
+
+  &.loaded {
+    visibility: visible;
+  }
+
+  //Also hide the container sibling to main
+  & + .tdcss-container {
+    visibility: hidden;
+
+    &.loaded {
+      visibility: visible;
+    }
+
+  }
+}
+
+.tdcss-header-container {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.category {
+  .tdcss-category {
+    // background-position: 0 0;
+    // background-repeat: no-repeat;
+    // width: 745px;
+    // height: 325px;
+
+    // .tdcss-h2 {
+    //   visibility: hidden;
+    // }
+  }
+}
+
+.tdcss-container {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  position: relative;
+  width: 1150px;
+
+  &.loaded {
+    display: block;
+  }
+
+}
+
+
+.tdcss-elements {
+  display: inline-block;
+  float: none; //override tdcss
+  width: 920px;
+  padding-left: 30px;
+
+  p {
+    margin-bottom: 18px;
+  }
+}
+
+.tdcss-navigation {
+  display: inline-block;
+  width: 225px;
+
+  .tdcss-nav-category {
+    padding-left: 0;//override tdcss
+
+    > .active {
+
+      .tdcss-nav {
+        padding-left: 50px;
+
+
+        .tdcss-section-title > a {
+          // font-family: tbd;
+          font-size: 14px;
+          width: 100%;
+          height: 35px;
+          line-height: 35px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .tdcss-nav > li {
+    width: 100%;
+  }
+  .tdcss-nav-category li {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tdcss-html-toggle {
+    padding-left: 20px; //override tdcss
+  }
+
+  .tdcss-html-snippet-toggle {
+    //these override tdcss
+    // color: 
+
+    &:hover {
+      // color: 
+    }
+  }
+}
+
+.tdcss-html-toggle {
+  background-color: $white;
+  border-top: 1px solid $light;
+  border-bottom: 1px solid $light;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+}
+
+.tdcss-html-toggle,
+.tdcss-category-title,
+.tdcss-nav-category {
+  // font-family: $mavenlink-type-font-accent;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: $white;
+  border-left: 1px solid $light;
+  border-right: 1px solid $light;
+
+  &:last-child {
+    border-bottom: 1px solid $light;
+    border-top: none;
+  }
+}
+
+.tdcss-nav-category {
+  border-top: 1px solid $light;
+}
+.tdcss-category-title {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  // font-family: $mavenlink-type-font-accent;
+}
+
+.tdcss-elements p {
+  margin-bottom: 18px;
+}
+
+//TDCSS CSS Overrides
+.tdcss-header {
+  // background-color: $sgHeader;
+  height: 550px;
+  width: 100%;
+
+  .logo {
+    position: absolute;
+    top: 33px;
+    left: 94px;
+    opacity: .75;
+    transition: opacity .4s;
+    z-index: 1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.tdcss-subheader-nav {
+  height: 44px;
+  .active {
+    // border-bottom: 4px solid $mavenHeader;
+  }
+}
+//tdcss font overrides
+div[class^="tdcss"], .tdcss-h3 {
+  font-family: inherit;
+}
+
+.category {
+  margin-top: 64px;
+  border-top: 1px solid $light;
+  border-bottom: 1px solid $light;
+}
+
+
+//To have an "island" for the right side, this overrides all the sub-sections replacing any margin-tops with padding
+.tdcss-description,
+.tdcss-category-wrap,
+.tdcss-section,
+.tdcss-top,
+.tdcss-fragment {
+  background-color: $white;
+  padding: 0 35px 30px;
+  border-left: 1px solid $light;
+  border-right: 1px solid $light;
+}
+
+.tdcss-fragment-title:empty {
+  padding: 0;
+  margin: 0; 
+}
+
+.tdcss-section {
+  padding-top: 60px;
+}
+
+.tdcss-category-wrap {
+  padding: 30px 35px;
+  border-bottom: 1px solid $light;
+}
+
+.tdcss-section .tdcss-bookmarkable {
+  position: absolute;
+  top: auto;
+  left: 9px;
+  bottom: 15px;
+}
+
+.tddcss-top-link {
+  float: right;
+  color: #575757;
+  opacity: .7;
+  transition: opacity .4s ease-out;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+
+
+.tdcss-description {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  border-bottom: none;
+
+  //Hide "back to tops" that come directly after a description (which should be
+  //our category descriptions), as those have a horizontal rule which clashes
+  & + .tdcss-top {
+    display: none;
+  }
+
+  pre, .codeword {
+    // background-color: $codeBG;
+    border-radius: 2px;
+    // color: $codeColor;
+  }
+
+  pre {
+    border: 1px solid $light;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: auto;
+    padding: 6px 10px;
+    margin: 15px 0;
+  }
+
+  .codeword {
+    padding: 3px 2px;
+    margin: 0;
+    font-size: 90%;
+  }
+}
+
+div[class^="tdcss"] {
+  .tdcss-description,
+  .tdcss-elements p,
+  .tdcss-description p {
+    // font-family: $mavenlink-type-font-accent;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+.tdcss-dom-example {
+  // background-color: $white !important;
+}
+
+
+.tdcss-description,
+.language-markup {
+  ul {
+    list-style: disc inside;
+  }
+}
+
+.language-javascript,
+.language-coffeescript,
+.language-markup {
+  font-size: 13px;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  // background-color: $codeBG;
+  border: 1px solid $light;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+
+.tdcss-nav, .tdcss-subheader-nav, .tdcss-h3 {
+  font-size: 14px !important;
+}
+
+.tdcss-dom-example {
+  z-index: 11;
+  h6 {
+    margin: 10px 0;
+  }
+  .field-radio-container {
+    label {
+      margin-right: 10px;
+    }
+  }
+}
+
+.tdcss-code-example {
+  z-index: 10;
+
+  .tdcss-copy-btn {
+    background-color: $x-light;
+    color: $mid-dark;
+  }
+
+}
+
+//original them overrides
+.tdcss-category .tdcss-h2,
+.tdcss-section .tdcss-h2 {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  transition: none;
+  background-color: inherit;
+  letter-spacing: -1px;
+  color: #838383;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+
+.tdcss-section .tdcss-h2:after {
+  float: none;
+  padding: 0;
+  font-size: inherit;
+  content: none;
+}
+
+.tdcss-section.is-collapsed .tdcss-h2:after {
+  content: none;
+}
+
+.tdcss-section:hover .tdcss-h2 {
+  background-color: inherit;
+}
+
+.footer {
+  clear: both;
+  background-color: #333333;
+  text-align: center;
+  color: #a9adb1;
+  height: 100px;
+  padding: 20px 0;
+}
