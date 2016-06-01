@@ -68,7 +68,7 @@ input[type="color"] {
 
   &#{$uforms-namespace}-input-block {
     width: 100%;
-    margin: 8px 0 12px 0;
+    margin: $uforms-vertical-padding 0;
   }
 }
 

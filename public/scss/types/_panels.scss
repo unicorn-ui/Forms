@@ -44,7 +44,7 @@
 }
 
 #{$uforms-namespace}-panel-body {
-  padding: 20px;
+  padding: $uforms-vertical-padding;
   font-size: $uforms-font-size;
   color: $uforms-font-color;
   border: 1px solid $uforms-border-color;
