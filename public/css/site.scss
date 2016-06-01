@@ -296,6 +296,8 @@ div[class^="tdcss"], .tdcss-h3 {
   border-bottom: 1px solid $light;
 
   //Makes first category have clearance from fixed header, consistent with left sidebar
+  //Otherwise, they have curated 80px distance from each other.
+  margin-top: 80px;
   &:first-child {
     margin-top: $headerClearance;
   }
@@ -325,7 +327,6 @@ div[class^="tdcss"], .tdcss-h3 {
   padding: 30px 35px;
   border-bottom: 1px solid $light;
   background-color: $xx-light;
-  margin-top: 80px;
 }
 
 .tdcss-category-wrap + .tdcss-top {
