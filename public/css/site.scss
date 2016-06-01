@@ -1,4 +1,5 @@
 $white: #ffffff;
+$xx-light: #fafafa;
 $x-light: #f6f6f6;
 $light: #f0f0f0;
 $mid-light: #888888;
@@ -323,6 +324,12 @@ div[class^="tdcss"], .tdcss-h3 {
 .tdcss-category-wrap {
   padding: 30px 35px;
   border-bottom: 1px solid $light;
+  background-color: $xx-light;
+  margin-top: 80px;
+}
+
+.tdcss-category-wrap + .tdcss-top {
+    padding-top: 20px;
 }
 
 .tdcss-section .tdcss-bookmarkable {
