@@ -2,8 +2,11 @@
 // BASE DEFAULTS /////////////////////////////////////////
 //////////////////////////////////////////////////////////
 $uforms-namespace: '.form' !default; //prefix for all classes
-$uforms-panel-bgcolor: #5a5a5a!default;
 $uforms-fields-bgcolor: transparent !default;
+
+//You should definitely override / reset this!
+$uforms-panel-bgcolor: #1B9AF7;
+
 //Set this to false if you want things like up/down number arrows on right side
 $unicorn-turn-off-number-input-spinners: true !default;
 $uforms-color-field-width: 50px !default;

@@ -21,6 +21,15 @@ $fontStack: proxima-nova, Helvetica, Verdana, Arial, "Lucida Grande", sans-serif
 
 body {
   font-family: $fontStack;
+  background-color: $x-light;
+}
+
+ul,
+ol {
+  list-style: none;
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
 }
 
 .l-centered-content {
@@ -406,6 +415,8 @@ pre[class*="language-"] {
 }
 
 .tdcss-dom-example {
+  background-color: transparent !important;
+  
   z-index: 11;
   h6 {
     margin: 10px 0;
