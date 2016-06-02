@@ -77,9 +77,11 @@ ol {
   li {
     float: right;
     margin: 0px;
+    transition: background .5s ease-out;
+    background: transparent;
 
     &:hover {
-      background: white;
+      background: $blue;
       cursor: pointer;
 
       a {
