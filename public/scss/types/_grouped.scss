@@ -4,7 +4,7 @@
 ////////////////////////////////////////////
 
 #{$uforms-namespace}-grouped {
-  margin: 0 0 10px;
+  margin: 0 0 $uforms-vertical-padding;
   padding: 0;
 
   & input,

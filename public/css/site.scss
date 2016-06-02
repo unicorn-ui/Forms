@@ -662,7 +662,12 @@ code[class*="language-css"] {
 
 
 
+////////////////////////////////////////////////
 
+// Inline form–place button to right
+[for="remember"] + .button {
+  float: right;
+}
 
 
 
