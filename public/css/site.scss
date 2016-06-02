@@ -187,9 +187,14 @@ div[role=main] {
     > .active {
 
       .tdcss-nav {
-        padding-left: 50px;
+        padding-left: 0;
 
-
+        > li {
+          width: 100%;
+          padding-left: 50px;
+          border-bottom: 1px dashed $light;
+        }
+    
         .tdcss-section-title > a {
           font-family: $fontStack;
           font-size: 14px;
@@ -199,6 +204,14 @@ div[role=main] {
           display: inline-block;
         }
       }
+    }
+
+    //On the last sidebar category, we want to put the borders on top
+    &:last-child {
+      > .active .tdcss-nav > li {
+        border-top: 1px dashed $light;
+        border-bottom: none;
+      } 
     }
   }
 
