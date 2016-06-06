@@ -15,7 +15,49 @@ $(function() {
     });
   }
 
+  function executeCopy (text) {
+    var input;
+    try {
+      input = document.createElement('textarea');
+      input.style.position = 'fixed';
+      input.style.opacity = 0;
+      document.body.appendChild(input);
+      input.value = text;
+      input.focus();
+      input.select();
+      document.execCommand('Copy');
+      input.remove();
+    } catch (err) {
+      console.warn("Unable to copy color to clipboard.");
+    }
+  }
+
+  function executeCopy2(html, useInnerHtml) {
+    var text, doc = new DOMParser().parseFromString(html, 'text/html')
+    if (useInnerHtml) {
+      text = doc.body.innerHTML;
+    }
+    else {
+      text = doc.body.textContent;
+    }
+
+    return executeCopy(text);
+  }
+
+  function bindCopySnippet() {
+    var target, code, copied;
+
+    $('.tdcss-copy-btn').on('click', function(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      var target = $(ev.currentTarget);
+      code = $(target).next().text();
+      executeCopy2(code, true);
+    });
+  }
+
   bindSidebarFadeActions();
+  bindCopySnippet();
 
 });
 
