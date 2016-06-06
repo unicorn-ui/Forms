@@ -14,4 +14,3 @@ Below are setup instructions for Unicorn-UI module development. You'll need to h
 # TODO
 1. copy to clipboard
 2. percentage based panel sizes???
-3. hangout input "jump-out"
