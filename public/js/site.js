@@ -53,6 +53,12 @@ $(function() {
       var target = $(ev.currentTarget);
       code = $(target).next().text();
       executeCopy2(code, true);
+
+      var original = $(target).html();
+      $(target).html('Copied!');
+      _.delay(function() {
+        $(target).html(original);
+      }, 3000);
     });
   }
 
