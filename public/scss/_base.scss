@@ -8,6 +8,7 @@
 #{$uforms-namespace} {
   width: auto;
   margin: $uforms-input-height 0;
+  position: relative;
 
   fieldset {
     border: 0;
@@ -108,7 +109,7 @@ input[type="color"] {
     }
     & > input {
       width: 100%;
-      padding-left: 30px;
+      padding-left: $uforms-icon-padding;
     }
   }
   &.icon-right {
@@ -117,7 +118,7 @@ input[type="color"] {
     }
     & > input {
       width: 100%;
-      padding-right: 30px;
+      padding-right: $uforms-icon-padding;
     }
   }
 }

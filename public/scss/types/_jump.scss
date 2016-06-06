@@ -1,0 +1,46 @@
+
+////////////////////////////////////////////
+// JUMP INPUTS /////////////////////////////
+////////////////////////////////////////////
+
+#{$uforms-namespace}-field-jump {
+  transition: all .3s ease-out;
+  
+  &:focus,
+  &.focus {
+    background-color: $uforms-panel-bgcolor;
+    bottom: 0;
+    height: $uforms-input-height * 1.5;
+    transform: scale(1.02);
+    z-index: 1;
+    border: none;
+
+    &::placeholder {
+      color: $uforms-font-jump-color;
+    }
+  }
+}
+
+//Hack: Specificity hack to get the box-shadow to kick in on focus
+#{$uforms-namespace} #{$uforms-namespace}-field-jump {
+  &:focus,
+  &.focus {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 10px 20px 0, rgba(0, 0, 0, 0.3) 0 0 30px 0;
+  }
+}
+
+#{$uforms-namespace} .icon-left #{$uforms-namespace}-field-jump:focus {
+  padding-left: $uforms-icon-padding * 1.5;
+}
+#{$uforms-namespace} .icon-right #{$uforms-namespace}-field-jump:focus {
+  padding-right: $uforms-icon-padding * 1.5;
+}
+
+//On focus, we need to adjust the vertically alignment to match our 150%H jump inputs
+.form-field-group.icon-left #{$uforms-namespace}-field-jump:focus + i,
+.form-field-group.icon-left #{$uforms-namespace}-field-jump.focus + i,
+.form-field-group.icon-right  #{$uforms-namespace}-field-jump.focus + i,
+.form-field-group.icon-right  #{$uforms-namespace}-field-jump:focus + i {
+  line-height: $uforms-input-height * 1.5;
+}
+

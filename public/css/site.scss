@@ -346,7 +346,8 @@ div[class^="tdcss"], .tdcss-h3 {
   background-color: $xx-light;
 }
 
-.tdcss-category-wrap + .tdcss-top {
+.tdcss-category-wrap + .tdcss-top,
+.tdcss-category-wrap + .tdcss-description {
     padding-top: 20px;
 }
 

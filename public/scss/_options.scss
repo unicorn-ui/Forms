@@ -19,6 +19,7 @@ $uforms-vertical-padding: 20px;
 // TYPOGRAPHY ////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 $uforms-font-color: #666 !default;
+$uforms-font-jump-color: #ffffff !default;
 $uforms-font-dark: darken($uforms-font-color, 10%) !default;
 $uforms-font-muted: lighten($uforms-font-color, 10%) !default;
 $uforms-font-size: 14px !default;
@@ -41,6 +42,7 @@ $uforms-placeholder-focus-color: lighten($uforms-font-muted, 15%) !default;
 $uforms-border-color: #dddddd !default;
 $uforms-checkbox-font-size: $uforms-small-font-size !default;
 $uforms-checkbox-height: 13px !default;;
+$uforms-icon-padding: 30px;
 
 //////////////////////////////////////////////////////////
 // RESPONSIVE ////////////////////////////////////////////
