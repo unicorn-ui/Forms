@@ -51,14 +51,14 @@ $(function() {
       ev.preventDefault();
       ev.stopPropagation();
       var target = $(ev.currentTarget);
+      var original = $(target).html();
       code = $(target).next().text();
+      $(target).html('Copied!');
       executeCopy2(code, true);
 
-      var original = $(target).html();
-      $(target).html('Copied!');
       _.delay(function() {
         $(target).html(original);
-      }, 3000);
+      }, 1200);
     });
   }
 

@@ -462,9 +462,23 @@ pre[class*="language-"] {
   .tdcss-copy-btn {
     background-color: $blue;
     color: $white;
+    padding: 0;
+    margin: 0;
+    line-height: 35px;
+    outline: none;
   }
-
 }
+
+.tdcss-code-cut {
+  vertical-align: middle;
+  margin-right: 2px;
+  
+  &:before {
+    font-size: 16px;
+    font-style: normal;
+  }
+}
+
 
 .tdcss-category .tdcss-h2,
 .tdcss-section .tdcss-h2 {
