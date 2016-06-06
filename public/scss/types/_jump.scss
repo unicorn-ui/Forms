@@ -14,6 +14,7 @@
     transform: scale(1.02);
     z-index: 1;
     border: none;
+    color: $uforms-font-jump-color;
 
     &::placeholder {
       color: $uforms-font-jump-color;
