@@ -10,7 +10,3 @@ Below are setup instructions for Unicorn-UI module development. You'll need to h
 
 # Cheat Sheet
 ```harp compile . /tmp/harptest```
-
-# TODO
-1. copy to clipboard
-2. percentage based panel sizes???

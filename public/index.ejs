@@ -18,7 +18,7 @@
 
 <!-- # Medium -->
 <!-- : ; 100% -->
-<form class="form form-panel form-panel-normal form-panel-centered">
+<form class="form form-panel form-panel-medium form-panel-centered">
   <div class="form-panel-header">
     <h3>Sign In</h3>
   </div>
@@ -46,21 +46,32 @@
   </div>
 </form>
 
-<!-- # Full Width -->
-<!-- & <p>If you  don't add a form-panel-SIZE class, it'll take up 100% width.</p> -->
+<!-- # X-Large -->
+<!-- & <p>Note that you can also leave off the <span class="inline-code">form-panel-SIZE</span> class and it'll use whatever the natural CSS width is (usually 100% of parent's width).</p> -->
 <!-- : ; 100% -->
-<form class="form form-panel">
+<form class="form form-panel form-panel-x-large form-panel-centered">
   <div class="form-panel-header">
     <h3>Sign In</h3>
   </div>
   <div class="form-panel-body">
-    <label for="login4">Email</label>
-    <input class="form-input-block" id="login4" name="login" type="text">
-    <label for="password4">Password</label>
-    <input class="form-input-block" id="password4" name="password" type="password">
+    <label for="login3">Email</label>
+    <input class="form-input-block" id="login3" name="login" type="text">
+    <label for="password3">Password</label>
+    <input class="form-input-block" id="password3" name="password" type="password">
     <button class="button button-block button-rounded button-primary">Sign In</button>
   </div>
 </form>
+
+
+<!-- # Customizing -->
+<!-- & 
+<p>Form panels use percentages by default as shown in the examples above. However, panel sizes are fully configurable, so you can customize class names, percentage or pixel values, etc., to suite your project's needs. Configure these by editing the <span class="inline-code">$uforms-sizes</span> variable in the <span class="inline-code">_options.scss</span> file and recompiling.</p>
+<p>You'll need to install dependecies with:
+<pre>npm install</pre>
+<pre>bower install</pre>
+<p>And then recompile Forms with:
+<pre>gulp css</pre></p>
+-->
 
 <!-- @ Grouped -->
 <!-- # Rectangular -->
