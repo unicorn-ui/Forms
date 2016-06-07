@@ -33,7 +33,7 @@ $(function() {
   }
 
   function executeCopy2(html, useInnerHtml) {
-    var text, doc = new DOMParser().parseFromString(html, 'text/html')
+    var text, doc = new DOMParser().parseFromString(html, 'text/html');
     if (useInnerHtml) {
       text = doc.body.innerHTML;
     }

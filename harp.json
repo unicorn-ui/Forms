@@ -1,7 +1,7 @@
 {
     "globals": {
-        "siteTitle": "Unicorn-UI Forms",
-        "title": "Unicorn-UI Forms",
-        "description": "Form elements built with CSS and Sass. The Forms framework is ready to use and easy to install."
+        "siteTitle": "Forms",
+        "title": "A Forms Library Built With Sass",
+        "description": "Unicorn-UI's Forms library built with Sass. The Forms framework is ready to use and easy to install."
     }
 }
