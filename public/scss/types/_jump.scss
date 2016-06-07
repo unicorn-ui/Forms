@@ -43,5 +43,6 @@
 .form-field-group.icon-right  #{$uforms-namespace}-field-jump.focus + i,
 .form-field-group.icon-right  #{$uforms-namespace}-field-jump:focus + i {
   line-height: $uforms-input-height * 1.5;
+  color: $uforms-font-jump-color;
 }
 
