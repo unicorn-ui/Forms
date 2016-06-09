@@ -1,4 +1,5 @@
 ## Forms Beta
+A Forms library built with Sass. The Forms framework is ready to use and easy to install.
 
 ![Alt text](/public/img/forms-screenshot.png?raw=true "Forms Beta Screenshot")
 
