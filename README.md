@@ -6,7 +6,3 @@ Below are setup instructions for Unicorn-UI module development. You'll need to h
 2. Now inside the /public directory run ```bower install```.
 2. Now run ```gulp css``` to build the module files.
 3. Run ```harp server``` to start a server and visit page in local browser to preview.
-
-
-# Cheat Sheet
-```harp compile . /tmp/harptest```
