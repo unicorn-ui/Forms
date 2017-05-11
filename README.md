@@ -4,7 +4,19 @@ A Forms library built with Sass. The Forms framework is ready to use and easy to
 ![Alt text](/public/img/forms-shot.png?raw=true "Forms Beta Screenshot")
 
 ## Unicorn-UI Module Development
-Below are setup instructions for Unicorn-UI module development. You'll need to have [bower](http://bower.io/) and [node.js](http://nodejs.org/) installed before you begin.
+Below are setup instructions for Unicorn-UI module development. You'll need to have [bower](http://bower.io/) and [node.js](http://nodejs.org/), and harp installed before you begin.
+
+Install bower and harp:
+```
+npm install -g bower
+npm install -g harp
+```
+
+Errors with node-sass? If you're using node 4.x or later then you need to reinstall gulp-sass with:
+```
+npm uninstall --save-dev gulp-sass
+npm install --save-dev gulp-sass@2
+```
 
 ## Development
 1. On the command line root directory run ```npm install```
